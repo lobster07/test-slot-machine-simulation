@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Getting Started</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+        .container .surface{
+            border: 1px solid #444;
+        }
+
+        .debug-panel{
+          display: flex;
+          width: 768px;
+          padding: 15px;
+          margin-top: 20px;
+          box-sizing: border-box;
+          border: 2px dotted #444;
+        }
+
+        .debug-panel .static{
+          display: grid;
+          width: 100%;
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+          grid-column-gap: 15px;
+        }
+
+        .combination .action{
+            display: block;
+            width: 100%;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-top: 10px;
+            border-radius: 3px;
+
+            cursor: pointer;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <canvas class="surface" width="640" height="480" id="canvas" />
+    </div>
+    <div class="container">
+      <div class="debug-panel">
+        <div class="static">
+          <div class="combination">
+            <h4>Cherry combinations:</h4>
+            <button class="action" mask="[1,1,1]">3 CHERRY on top</button>
+            <button class="action" mask="[2,2,2]">3 CHERRY on center</button>
+            <button class="action" mask="[3,3,3]">3 CHERRY on bottom</button>
+          </div>
+          <div class="combination">
+            <h4>'7' combinations:</h4>
+            <button class="action" mask="[2,2,2]">3 '7' on top</button>
+            <button class="action" mask="[3,3,3]">3 '7' on center</button>
+            <button class="action" mask="[4,4,4]">3 '7' on buttom</button>
+          </div>
+          <div class="combination">
+            <h4>3xBAR combinations:</h4>
+            <button class="action" mask="[0,0,0]">3 3xBAR on top</button>
+            <button class="action" mask="[1,1,1]">3 3xBAR on center</button>
+            <button class="action" mask="[2,2,2]">3 3xBAR on buttom</button>
+          </div>
+          <div class="combination">
+              <h4>2xBAR combinations:</h4>
+              <button class="action" mask="[3,3,3]">3 2xBAR on top</button>
+              <button class="action" mask="[4,4,4]">3 2xBAR on center</button>
+              <button class="action" mask="[2,2,2]">3 2xBAR on buttom</button>
+          </div>
+          <div class="combination">
+              <h4>BAR combinations:</h4>
+              <button class="action" mask="[4,4,4]">3 BAR on top</button>
+              <button class="action" mask="[5,5,5]">3 BAR on center</button>
+              <button class="action" mask="[1,1,1]">3 BAR on buttom</button>
+          </div>
+        
+        </div>
+        <div class="dynamic">
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
